@@ -12,7 +12,7 @@ Requires:	dctc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-CCCP is a console front end to the Direct Conect Text Client.
+CCCP is a console front end to the Direct Connect Text Client.
 DCTC is a library that gives access to the direct connect world.
 CCCP is a console based front end to that library. CCCP is 
 designed to allow both scripting and command line interaction.
