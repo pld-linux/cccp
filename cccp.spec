@@ -6,6 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://members01.chello.se/hampasfirma/%{name}/%{name}.%{version}.tar.gz
+# Source0-md5:	44500b5077a9791d9c5eeaeace6ef34b
 URL:		http://members01.chello.se/hampasfirma/cccp/
 Requires:	dctc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
