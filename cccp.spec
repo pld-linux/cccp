@@ -25,7 +25,7 @@ CCCP zosta³ stworzony, aby pozwoliæ jednocze¶nie na interaktywn±
 oraz skryptow± pracê.
 
 %prep
-%setup -q -n %{name}.%{version}
+%setup -q
 
 %build
 %{__cc} %{rpmcflags} %{rpmldflags} cccp.c -o cccp
@@ -39,9 +39,10 @@ done
 %install
 rm -rf $RPM_BUILD_ROOT
 
-make	DESTDIR=$RPM_BUILD_ROOT \
+make install \
+	DESTDIR=$RPM_BUILD_ROOT \
 	BINDIR=%{_bindir} \
-	MANDIR=%{_mandir}/man1/ install
+	MANDIR=%{_mandir}/man1
 
 mv $RPM_BUILD_ROOT%{_mandir}/man1/cccp.1 $RPM_BUILD_ROOT%{_mandir}/man1/rccp.1
 install scripts/dc.* $RPM_BUILD_ROOT%{_bindir}
