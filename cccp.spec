@@ -1,12 +1,11 @@
 Summary:	Red Connect Console Program
 Summary(pl):	Tekstowy interfejs do dctc
 Name:		cccp
-Version:	0.6
+Version:	0.9
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://members01.chello.se/hampasfirma/%{name}/%{name}.%{version}.tar.gz
-Patch0:		%{name}-DESTDIR.patch
 URL:		http://members01.chello.se/hampasfirma/cccp/
 Requires:	dctc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -26,7 +25,6 @@ oraz skryptow± pracê.
 
 %prep
 %setup -q -n %{name}.%{version}
-%patch0 -p1
 
 %build
 %{__cc} %{rpmcflags} %{rpmldflags} cccp.c -o cccp
