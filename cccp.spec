@@ -25,7 +25,7 @@ CCCP zosta³ stworzony, aby pozwoliæ jednocze¶nie na interaktywn±
 oraz skryptow± pracê.
 
 %prep
-%setup -q
+%setup -q -n %{name}.%{version}
 
 %build
 %{__cc} %{rpmcflags} %{rpmldflags} cccp.c -o cccp
