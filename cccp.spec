@@ -6,6 +6,7 @@ Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://members01.chello.se/hampasfirma/%{name}/%{name}.%{version}.tar.gz
+Patch0:		%{name}-DESTDIR.patch
 URL:		http://members01.chello.se/hampasfirma/cccp/
 Requires:	dctc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,6 +26,7 @@ oraz skryptow± pracê.
 
 %prep
 %setup -q -n %{name}.%{version}
+%patch0 -p1
 
 %build
 %{__cc} %{rpmcflags} %{rpmldflags} cccp.c -o cccp
@@ -38,10 +40,11 @@ done
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-install cccp $RPM_BUILD_ROOT%{_bindir}
+make	DESTDIR=$RPM_BUILD_ROOT \
+	BINDIR=%{_bindir} \
+	MANDIR=%{_mandir}/man1/ install
+
 install scripts/dc.* $RPM_BUILD_ROOT%{_bindir}
-install cccp.1 $RPM_BUILD_ROOT%{_mandir}/man1/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
