@@ -1,17 +1,18 @@
 Summary:	Red Connect Console Program
 Summary(pl):	Tekstowy interfejs do dctc
 Name:		cccp
-Version:	0.6
+Version:	0.9
 Release:	1
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://members01.chello.se/hampasfirma/%{name}/%{name}.%{version}.tar.gz
+# Source0-md5:	44500b5077a9791d9c5eeaeace6ef34b
 URL:		http://members01.chello.se/hampasfirma/cccp/
 Requires:	dctc
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-CCCP is a console front end to the Direct Conect Text Client.
+CCCP is a console front end to the Direct Connect Text Client.
 DCTC is a library that gives access to the direct connect world.
 CCCP is a console based front end to that library. CCCP is 
 designed to allow both scripting and command line interaction.
@@ -38,10 +39,13 @@ done
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
-install cccp $RPM_BUILD_ROOT%{_bindir}
+make install \
+	DESTDIR=$RPM_BUILD_ROOT \
+	BINDIR=%{_bindir} \
+	MANDIR=%{_mandir}/man1
+
+mv $RPM_BUILD_ROOT%{_mandir}/man1/cccp.1 $RPM_BUILD_ROOT%{_mandir}/man1/rccp.1
 install scripts/dc.* $RPM_BUILD_ROOT%{_bindir}
-install cccp.1 $RPM_BUILD_ROOT%{_mandir}/man1/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
