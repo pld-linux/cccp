@@ -5,8 +5,6 @@ Version:	0.1
 Release:	1
 License:	GPL
 Group:		Applications/Communications
-Group(de):	Applikationen/Kommunikation
-Group(pl):	Aplikacje/Komunikacja
 Source0:	http://members01.chello.se/hampasfirma/%{name}/%{name}.%{version}.tar.gz
 URL:		http://members.chello.se/hampasfirma/cccp/index.html
 Requires:	dctc
