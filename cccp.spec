@@ -1,7 +1,7 @@
 Summary:	Red Connect Console Program
 Summary(pl):	Tekstowy interfejs do dctc
 Name:		cccp
-Version:	0.1
+Version:	0.6
 Release:	1
 License:	GPL
 Group:		Applications/Communications
