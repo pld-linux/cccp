@@ -44,6 +44,7 @@ make	DESTDIR=$RPM_BUILD_ROOT \
 	BINDIR=%{_bindir} \
 	MANDIR=%{_mandir}/man1/ install
 
+mv $RPM_BUILD_ROOT%{_mandir}/man1/cccp.1 $RPM_BUILD_ROOT%{_mandir}/man1/rccp.1
 install scripts/dc.* $RPM_BUILD_ROOT%{_bindir}
 
 %clean
