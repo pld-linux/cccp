@@ -1,5 +1,5 @@
 Summary:	Red Connect Console Program
-Summary(pl):	Tekstowy interfejs do dctc
+Summary(pl.UTF-8):   Tekstowy interfejs do dctc
 Name:		cccp
 Version:	0.9
 Release:	1
@@ -17,12 +17,12 @@ DCTC is a library that gives access to the direct connect world.
 CCCP is a console based front end to that library. CCCP is
 designed to allow both scripting and command line interaction.
 
-%description -l pl
+%description -l pl.UTF-8
 CCCP jest konsolowym frontendem do Direct Connect Text Client.
-DCTC jest bibliotek±, która daje dostêp do ¦wiata Bezpo¶rednich
-Po³±czeñ, a CCCP jest konsolowym frontendem do tej biblioteki.
-CCCP zosta³ stworzony, aby pozwoliæ jednocze¶nie na interaktywn±
-oraz skryptow± pracê.
+DCTC jest bibliotekÄ…, ktÃ³ra daje dostÄ™p do Åšwiata BezpoÅ›rednich
+PoÅ‚Ä…czeÅ„, a CCCP jest konsolowym frontendem do tej biblioteki.
+CCCP zostaÅ‚ stworzony, aby pozwoliÄ‡ jednoczeÅ›nie na interaktywnÄ…
+oraz skryptowÄ… pracÄ™.
 
 %prep
 %setup -q -n %{name}.%{version}
