@@ -1,5 +1,5 @@
 Summary:	Red Connect Console Program
-Summary(pl.UTF-8):   Tekstowy interfejs do dctc
+Summary(pl.UTF-8):	Tekstowy interfejs do dctc
 Name:		cccp
 Version:	0.9
 Release:	1
